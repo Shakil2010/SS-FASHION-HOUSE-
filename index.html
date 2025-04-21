@@ -1,260 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS FASHION HOUSE</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>SS FASHION HOUSE</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="order.html">Order</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="slider">
-        <div class="slide fade">
-            <img src="img/banner1.jpg" alt="New Collection 1">
-        </div>
-        <div class="slide fade">
-            <img src="img/banner2.jpg" alt="New Collection 2">
-        </div>
-        <div class="slide fade">
-            <img src="img/banner3.jpg" alt="New Collection 3">
-        </div>
-    </div>
+// SS FASHION HOUSE - E-commerce Website with Order Sorting by Date Added
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 
-    <section class="new-arrivals">
-        <h2>New Arrivals</h2>
-        <div class="products">
-            <div class="product">
-                <img src="img/product1.jpg" alt="Product 1">
-                <p>Product 1</p>
-                <p>$20.00</p>
-            </div>
-            <div class="product">
-                <img src="img/product2.jpg" alt="Product 2">
-                <p>Product 2</p>
-                <p>$25.00</p>
-            </div>
-            <!-- Add more products here -->
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 SS FASHION HOUSE | Contact us at 01941222010</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - SS FASHION HOUSE</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>SS FASHION HOUSE</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="order.html">Order</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="product-list">
-        <div class="product-item">
-            <img src="img/product1.jpg" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Price: $20.00</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product-item">
-            <img src="img/product2.jpg" alt="Product 2">
-            <h3>Product 2</h3>
-            <p>Price: $25.00</p>
-            <button>Add to Cart</button>
-        </div>
-        <!-- More products here -->
-    </section>
-
-    <footer>
-        <p>&copy; 2025 SS FASHION HOUSE | Contact us at 01941222010</p>
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order - SS FASHION HOUSE</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>SS FASHION HOUSE</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="order.html">Order</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="checkout">
-        <h2>Checkout</h2>
-        <form>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="address">Shipping Address:</label>
-            <textarea id="address" name="address" required></textarea>
-            
-            <label for="phone">Your Phone Number:</label>
-            <input type="text" id="phone" name="phone" required>
-
-            <label for="payment">Choose Payment Method:</label>
-            <select id="payment" name="payment">
-                <option value="bkash">Bikash</option>
-                <option value="nagad">Nagad</option>
-                <option value="rocket">Rocket</option>
-                <option value="upay">Upay</option>
-            </select>
-
-            <p>Send money to the following number:</p>
-            <p>01941222010</p>
-
-            <label for="transaction">Transaction Number:</label>
-            <input type="text" id="transaction" name="transaction" required>
-
-            <button type="submit">Place Order</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 SS FASHION HOUSE | Contact us at 01941222010</p>
-    </footer>
-</body>
-</html>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-}
-
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header .logo h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #FFD700;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.product-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-}
-
-.product-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-button {
-    background-color: #FFD700;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #e6c300;
-}
-
-.checkout form {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.checkout label {
-    font-weight: bold;
-}
-
-.checkout input, .checkout select, .checkout textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.checkout button {
-    background-color: #FFD700;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-let slideIndex = 0;
-
-function showSlides() {
-    let slides = document.querySelectorAll('.slide');
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = 0;
+export default function Home() {
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      name: "Stylish Kurti",
+      description: "Comfortable and elegant design",
+      price: "৳950",
+      image: "https://via.placeholder.com/300x300.png?text=Kurti"
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.opacity = 1;
-    setTimeout(showSlides, 3000); // Change slide every 3 seconds
-}
+  ]);
 
-showSlides();
+  const [orders, setOrders] = useState([]);
+  const [orderInfo, setOrderInfo] = useState({ name: '', phone: '', trxId: '', product: '', paymentMethod: '', paid: false, confirmed: false });
+  const [newProduct, setNewProduct] = useState({ name: '', description: '', price: '', image: '' });
+
+  const handleOrderChange = (e) => {
+    setOrderInfo({ ...orderInfo, [e.target.name]: e.target.value });
+  };
+
+  const handlePaymentMethodChange = (value) => {
+    setOrderInfo({ ...orderInfo, paymentMethod: value });
+  };
+
+  const handleOrderSubmit = () => {
+    const timestamp = new Date().toISOString();
+    setOrders([{ ...orderInfo, date: timestamp, paid: orderInfo.paymentMethod === "Cash on Delivery" ? false : true, confirmed: false }, ...orders]);
+    alert("Order placed successfully!");
+    setOrderInfo({ name: '', phone: '', trxId: '', product: '', paymentMethod: '', paid: false, confirmed: false });
+  };
+
+  const handleDeleteOrder = (index) => {
+    const updated = [...orders];
+    updated.splice(index, 1);
+    setOrders(updated);
+  };
+
+  const togglePaymentStatus = (index) => {
+    const updated = [...orders];
+    updated[index].paid = !updated[index].paid;
+    setOrders(updated);
+  };
+
+  const toggleConfirmation = (index) => {
+    const updated = [...orders];
+    updated[index].confirmed = !updated[index].confirmed;
+    setOrders(updated);
+  };
+
+  const downloadOrders = () => {
+    const header = "Name,Phone,Product,TrxID,Payment Method,Paid,Confirmed,Date\n";
+    const rows = orders.map(o => `${o.name},${o.phone},${o.product},${o.trxId},${o.paymentMethod},${o.paid ? "Yes" : "No"},${o.confirmed ? "Yes" : "No"},${o.date}`).join("\n");
+    const csv = header + rows;
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'order_list.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleProductChange = (e) => {
+    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
+  };
+
+  const handleAddProduct = () => {
+    const newId = products.length + 1;
+    setProducts([...products, { ...newProduct, id: newId }]);
+    setNewProduct({ name: '', description: '', price: '', image: '' });
+  };
+
+  return (
+    <main className="min-h-screen bg-white text-gray-900 p-4">
+      <header className="text-center py-6 border-b border-gray-200">
+        <h1 className="text-4xl font-bold text-gold-600">SS FASHION HOUSE</h1>
+        <p className="text-sm mt-2">Style That Speaks</p>
+      </header>
+
+      <section className="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {products.map((product) => (
+          <Card key={product.id} className="shadow-xl rounded-2xl overflow-hidden">
+            <CardContent className="p-4">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-auto rounded-xl mb-2"
+              />
+              <h2 className="text-xl font-semibold">{product.name}</h2>
+              <p className="text-sm text-gray-500">{product.description}</p>
+              <p className="text-lg font-bold mt-2">{product.price}</p>
+              <Button className="mt-3 w-full bg-gold-500 hover:bg-gold-600" onClick={() => setOrderInfo({ ...orderInfo, product: product.name })}>Select</Button>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+
+      <section className="my-12 max-w-xl mx-auto bg-gray-50 p-6 rounded-xl shadow">
+        <h2 className="text-2xl font-semibold mb-4">Place Your Order</h2>
+        <div className="space-y-4">
+          <div>
+            <Label>Your Name</Label>
+            <Input name="name" value={orderInfo.name} onChange={handleOrderChange} placeholder="Enter your name" />
+          </div>
+          <div>
+            <Label>Phone Number</Label>
+            <Input name="phone" value={orderInfo.phone} onChange={handleOrderChange} placeholder="01XXXXXXXXX" />
+          </div>
+          <div>
+            <Label>Transaction ID (if applicable)</Label>
+            <Input name="trxId" value={orderInfo.trxId} onChange={handleOrderChange} placeholder="e.g. TX12345ABC" />
+          </div>
+          <div>
+            <Label>Payment Method</Label>
+            <Select value={orderInfo.paymentMethod} onValueChange={handlePaymentMethodChange}>
+              <SelectTrigger className="w-full">
+                {orderInfo.paymentMethod || "Select Method"}
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="bKash">bKash</SelectItem>
+                <SelectItem value="Nagad">Nagad</SelectItem>
+                <SelectItem value="Rocket">Rocket</SelectItem>
+                <SelectItem value="Upay">Upay</SelectItem>
+                <SelectItem value="Cash on Delivery">Cash on Delivery</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <Label>Selected Product</Label>
+            <Input name="product" value={orderInfo.product} readOnly className="bg-gray-100" />
+          </div>
+          <Button className="w-full bg-green-600 hover:bg-green-700" onClick={handleOrderSubmit}>Submit Order</Button>
+        </div>
+      </section>
+
+      <section className="my-12 max-w-5xl mx-auto bg-gray-100 p-6 rounded-xl shadow">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold">Order List</h2>
+          <Button className="bg-purple-600 hover:bg-purple-700" onClick={downloadOrders}>Download CSV</Button>
+        </div>
+        {orders.length === 0 ? (
+          <p className="text-gray-500">No orders yet.</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-sm text-left">
+              <thead>
+                <tr className="border-b font-bold">
+                  <th className="p-2">Name</th>
+                  <th className="p-2">Phone</th>
+                  <th className="p-2">Product</th>
+                  <th className="p-2">TrxID</th>
+                  <th className="p-2">Payment</th>
+                  <th className="p-2">Paid</th>
+                  <th className="p-2">Confirmed</th>
+                  <th className="p-2">Date</th>
+                  <th className="p-2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map((order, index) => (
+                  <tr key={index} className="border-b">
+                    <td className="p-2">{order.name}</td>
+                    <td className="p-2">{order.phone}</td>
+                    <td className="p-2">{order.product}</td>
+                    <td className="p-2">{order.trxId}</td>
+                    <td className="p-2">{order.paymentMethod}</td>
+                    <td className="p-2">{order.paid ? "Yes" : "No"}</td>
+                    <td className="p-2">{order.confirmed ? "Yes" : "No"}</td>
+                    <td className="p-2">{new Date(order.date).toLocaleString()}</td>
+                    <td className="p-2 space-y-1 flex flex-col">
+                      <Button className="text-xs bg-green-500 hover:bg-green-600" onClick={() => togglePaymentStatus(index)}>
+                        Toggle Paid
+                      </Button>
+                      <Button className="text-xs bg-yellow-500 hover:bg-yellow-600" onClick={() => toggleConfirmation(index)}>
+                        Toggle Confirm
+                      </Button>
+                      <Button className="text-xs bg-red-500 hover:bg-red-600" onClick={() => handleDeleteOrder(index)}>
+                        Delete
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      <footer className="mt-12 border-t pt-6 text-center text-sm text-gray-500">
+        <p>Send payment to: <strong>01941222010</strong> via bKash, Nagad, Rocket, or Upay</p>
+        <p>Contact: <strong>01941222010</strong></p>
+        <p>&copy; 2025 SS FASHION HOUSE. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+}
